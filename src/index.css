@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .animate-glow {
+    animation: glow 4s linear infinite;
+  }
+
+  .animate-float {
+    animation: float 8s ease-in-out infinite;
+  }
+
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@keyframes glow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.mesh-gradient {
+  background-color: #000000;
+  background-image: 
+    radial-gradient(at 40% 20%, rgba(88, 28, 135, 0.15) 0, transparent 50%),
+    radial-gradient(at 80% 0%, rgba(49, 46, 129, 0.15) 0, transparent 50%),
+    radial-gradient(at 0% 50%, rgba(124, 58, 237, 0.15) 0, transparent 50%),
+    radial-gradient(at 80% 50%, rgba(76, 29, 149, 0.15) 0, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(139, 92, 246, 0.15) 0, transparent 50%),
+    radial-gradient(at 80% 100%, rgba(91, 33, 182, 0.15) 0, transparent 50%);
+}
+
+.grid-pattern {
+  background-size: 50px 50px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+}
+
+.light-beam {
+  background: linear-gradient(45deg, 
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.03) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(-45deg);
+  animation: beam 8s linear infinite;
+}
+
+@keyframes beam {
+  0% { transform: translateX(-100%) rotate(-45deg); }
+  100% { transform: translateX(100%) rotate(-45deg); }
+}
