@@ -58,7 +58,7 @@ function App() {
         </div>
 
         <div className="relative max-w-6xl mx-auto px-4 py-24">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-20">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               { icon: Cpu, title: 'Precision Engineering', desc: 'Industry-leading accuracy with cutting-edge technology for flawless prints.' },
               { icon: Zap, title: 'Smart Assistance', desc: 'AI-powered support available 24/7 to ensure your printing success.' },
